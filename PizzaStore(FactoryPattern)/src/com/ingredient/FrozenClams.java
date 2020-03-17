@@ -1,4 +1,4 @@
 package com.ingredient;
 
-public class FrozenClams {
+public class FrozenClams extends Clams{
 }

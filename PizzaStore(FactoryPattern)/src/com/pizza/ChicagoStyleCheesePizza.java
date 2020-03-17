@@ -2,15 +2,15 @@ package com.pizza;
 
 import com.pizza.Pizza;
 
-public class ChicagoStyleCheesePizza extends Pizza {
-    public ChicagoStyleCheesePizza(){
-        name = "Chicago Style Deep Dish Cheese com.pizza.Pizza";
-        dough = "Extra Thick Crust Dough";
-        sauce = "Plum Tomato Sauce";
+public class ChicagoStyleCheesePizza {
+    /*public ChicagoStyleCheesePizza(){
+        name = "Chicago Style Deep Dish com.ingredient.Cheese com.pizza.Pizza";
+        dough = "Extra Thick Crust com.ingredient.Dough";
+        sauce = "Plum Tomato com.ingredient.Sauce";
 
-        toppings.add("Shredded Mozzarella Cheese");
+        toppings.add("Shredded Mozzarella com.ingredient.Cheese");
     }
-    void cut(){
+    public void cut(){
         System.out.println("Cutting the pizza into square slices");
-    }
+    } */
 }

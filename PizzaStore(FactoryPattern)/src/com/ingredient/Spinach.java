@@ -1,4 +1,4 @@
 package com.ingredient;
 
-public class Spinach {
+public class Spinach extends Veggies{
 }

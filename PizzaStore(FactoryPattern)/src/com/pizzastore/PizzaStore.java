@@ -1,3 +1,8 @@
+package com.pizzastore;
+
+import com.ingredientfactory.PizzaIngredientFactory;
+import com.pizza.Pizza;
+
 public abstract class PizzaStore {
 
     public final Pizza orderPizza(String type){
@@ -10,7 +15,7 @@ public abstract class PizzaStore {
         return pizza;
     }
 
-    public abstract Pizza createPizza(String type);
+    protected abstract Pizza createPizza(String type);
 
 
 }

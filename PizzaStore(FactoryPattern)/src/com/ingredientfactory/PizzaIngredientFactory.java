@@ -1,8 +1,12 @@
+package com.ingredientfactory;
+
+import com.ingredient.*;
+
 public interface PizzaIngredientFactory {
-    public Dough createDough();
-    public Sauce createSauce();
-    public Cheese createCheese();
-    public Veggies[] createVegies();
-    public Pepperoni createPepperoni();
-    public Clams createClam();
+    Dough createDough();
+    Sauce createSauce();
+    Cheese createCheese();
+    Veggies[] createVegies();
+    Pepperoni createPepperoni();
+    Clams createClam();
 }

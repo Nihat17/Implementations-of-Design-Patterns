@@ -1,4 +1,4 @@
 package com.ingredient;
 
-public class RedPepper {
+public class RedPepper extends Veggies{
 }

@@ -1,4 +1,4 @@
 package com.ingredient;
 
-public class SlicedPepperoni {
+public class SlicedPepperoni extends Pepperoni{
 }

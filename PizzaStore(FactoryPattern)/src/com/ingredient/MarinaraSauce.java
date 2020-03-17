@@ -1,4 +1,4 @@
 package com.ingredient;
 
-public class MarinaraSauce {
+public class MarinaraSauce extends Sauce{
 }

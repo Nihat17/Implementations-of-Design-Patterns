@@ -1,2 +1,6 @@
-public class CaliforniaStylePepperoniPizza extends Pizza{
+package com.pizza;
+
+import com.pizza.Pizza;
+
+public class CaliforniaStylePepperoniPizza{
 }

@@ -1,4 +1,4 @@
 package com.ingredient;
 
-public class FreshClams {
+public class FreshClams extends Clams{
 }

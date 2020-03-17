@@ -1,11 +1,13 @@
+package com.pizza;
+
 import com.pizza.Pizza;
 
-public class NYStyleCheesePizza extends Pizza {
-    public NYStyleCheesePizza(){
-        name = "NY Style Sauce Cheese com.pizza.Pizza";
-        dough = "Thin Crust Dough";
-        sauce = "Marinara Sauce";
+public class NYStyleCheesePizza {
+    /*public NYStyleCheesePizza(){
+        name = "NY Style com.ingredient.Sauce com.ingredient.Cheese com.pizza.Pizza";
+        dough = "Thin Crust com.ingredient.Dough";
+        sauce = "Marinara com.ingredient.Sauce";
 
-        toppings.add("Grated Reggiano Cheese");
-    }
+        toppings.add("Grated Reggiano com.ingredient.Cheese");
+    }*/
 }

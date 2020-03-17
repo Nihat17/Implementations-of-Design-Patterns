@@ -1,4 +1,4 @@
 package com.ingredient;
 
-public class ThickCrustDough {
+public class ThickCrustDough extends Dough{
 }

@@ -4,33 +4,35 @@ import com.ingredient.*;
 import com.ingredientfactory.PizzaIngredientFactory;
 
 public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
+
     @Override
     public Dough createDough() {
-        return null;
+        return new ThickCrustDough();
     }
 
     @Override
     public Sauce createSauce() {
-        return null;
+        return new PlumTomatoSauce();
     }
 
     @Override
     public Cheese createCheese() {
-        return null;
+        return new MozarellaCheese();
     }
 
     @Override
     public Veggies[] createVegies() {
-        return new Veggies[0];
+        Veggies[] veggies = {new Spinach(), new EggPlant(), new BlackOlives()};
+        return veggies;
     }
 
     @Override
     public Pepperoni createPepperoni() {
-        return null;
+        return new SlicedPepperoni();
     }
 
     @Override
     public Clams createClam() {
-        return null;
+        return new FrozenClams();
     }
 }

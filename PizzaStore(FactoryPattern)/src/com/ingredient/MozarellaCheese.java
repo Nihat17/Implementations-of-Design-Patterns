@@ -1,4 +1,4 @@
 package com.ingredient;
 
-public class MozarellaCheese {
+public class MozarellaCheese extends Cheese{
 }

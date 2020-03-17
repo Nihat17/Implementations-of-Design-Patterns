@@ -1,30 +1,48 @@
-import java.util.ArrayList;
+package com.pizza;
 
-public class Pizza {
+import com.ingredient.*;
+
+import java.util.Arrays;
+
+public abstract class Pizza {
     String name;
-    String dough;
-    String sauce;
-    ArrayList toppings = new ArrayList();
 
-    public void prepare(){
-        System.out.println("Preparing" + name);
-        System.out.println("Tossing dough...");
-        System.out.println("Adding sauce...");
-        System.out.println("Adding toppings: ");
-        for (int i = 0; i < toppings.size(); i++) {
-            System.out.println("  " + toppings.get(i));
-        }
-    }
-    void bake(){
+    Dough dough;
+    Sauce sauce;
+    Veggies[] veggies;
+    Cheese cheese;
+    Pepperoni pepperoni;
+    Clams clams;
+
+    public abstract void prepare();
+
+    public void bake(){
         System.out.println("Baking");
     }
-    void cut(){
+    public void cut(){
         System.out.println("Cutting...");
     }
-    void box(){
+    public void box(){
         System.out.println("Boxing...");
     }
-    String getName() {
+    public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "name='" + name + '\'' +
+                ", dough=" + dough +
+                ", sauce=" + sauce +
+                ", veggies=" + Arrays.toString(veggies) +
+                ", cheese=" + cheese +
+                ", pepperoni=" + pepperoni +
+                ", clams=" + clams +
+                '}';
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

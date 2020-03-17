@@ -1,4 +1,6 @@
+package com.pizza;
+
 import com.pizza.Pizza;
 
-public class NYStylePepperoniPizza extends Pizza {
+public class NYStylePepperoniPizza{
 }
