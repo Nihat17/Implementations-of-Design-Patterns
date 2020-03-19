@@ -1,39 +1,20 @@
 public class Main {
     public static void main(String[] args){
-       RemoteControl remoteControl = new RemoteControl();
+      RemoteControl remoteControl = new RemoteControl();
+      Light livinRoomLight = new Light("Living Room");
 
-       Light livingRoomLight = new Light("Living Room");
-       Light kitchenLight = new Light("Kitchen");
-       CeilingFan ceilingFan = new CeilingFan("Living Room");
-       GarageDoor garageDoor = new GarageDoor("");
-       Stereo stereo = new Stereo("Living Room");
+      LightOnCommand livingRoomLightOn = new LightOnCommand(livinRoomLight);
+      LightOffCommand livingRoomLightOff = new LightOffCommand(livinRoomLight);
 
-       LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLight);
-       LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLight);
+      remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
 
-       LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
-       LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
-
-       CeilingFanOnCommand livingRoomCeilingFanOn = new CeilingFanOnCommand(ceilingFan);
-       CeilingFanOffCommand livingRoomCeilingFanOff = new CeilingFanOffCommand(ceilingFan);
-
-       GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand(garageDoor);
-       GarageDoorDownCommand garageDoorDown = new GarageDoorDownCommand(garageDoor);
-
-       StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
-       StereoOffCommand stereoOff = new StereoOffCommand(stereo);
-
-       remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
-       remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
-       remoteControl.setCommand(2, livingRoomCeilingFanOn, livingRoomCeilingFanOff);
-       remoteControl.setCommand(3, garageDoorUp, garageDoorDown);
-       remoteControl.setCommand(4, stereoOnWithCD, stereoOff);
-
-       System.out.println(remoteControl);
-
-       for(int i = 0; i < 4; i++){
-           remoteControl.onButtonWasPushed(i);
-           remoteControl.offButtonWasPushed(i);
-       }
+      remoteControl.onButtonWasPushed(0);
+      remoteControl.offButtonWasPushed(0);
+      System.out.println(remoteControl);
+      remoteControl.undoButtonWasPushed();
+      remoteControl.offButtonWasPushed(0);
+      remoteControl.onButtonWasPushed(0);
+      System.out.println(remoteControl);
+      remoteControl.undoButtonWasPushed();
     }
 }

@@ -1,7 +1,7 @@
 public class RemoteControl {
-    Command[] onCommands;
-    Command[] offCommands;
-    Command undoCommand;
+    private Command[] onCommands;
+    private Command[] offCommands;
+    private Command undoCommand;
 
     public RemoteControl(){
         onCommands = new Command[7];
@@ -30,7 +30,7 @@ public class RemoteControl {
         undoCommand = offCommands[slot];
     }
 
-    public void undoButtonWasPushed(int slot){
+    public void undoButtonWasPushed(){
         undoCommand.undo();
     }
 
@@ -41,6 +41,7 @@ public class RemoteControl {
             stringBuffer.append("[slot " + i + "] " + onCommands[i].getClass().getName()
             + "  " + offCommands[i].getClass().getName() + "\n");
         }
+        stringBuffer.append("[undo] " + undoCommand.getClass().getName() + "\n");
         return stringBuffer.toString();
     }
 }
