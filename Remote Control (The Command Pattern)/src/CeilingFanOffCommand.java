@@ -1,9 +1,9 @@
-public class CeilingFanOff implements Command{
+public class CeilingFanOffCommand implements Command{
 
     CeilingFan ceilingFan;
     int prevSpeed;
 
-    public CeilingFanOff(CeilingFan ceilingFan) {
+    public CeilingFanOffCommand(CeilingFan ceilingFan) {
         this.ceilingFan = ceilingFan;
     }
 

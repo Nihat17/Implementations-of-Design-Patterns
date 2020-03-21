@@ -6,22 +6,26 @@ public class CeilingFan {
     public static final int OFF = 0;
     int speed;
 
-    public CeilingFan(String roomName) {
-        this.location = roomName;
+    public CeilingFan(String location) {
+        this.location = location;
         speed = OFF;
     }
 
     public void high(){
         speed = HIGH;
+        System.out.println(location + " ceiling fan is on high");
     }
     public void medium(){
         speed = MEDIUM;
+        System.out.println(location + " ceiling fan is on medium");
     }
     public void low(){
         speed = LOW;
+        System.out.println(location + " ceiling fan is on low");
     }
     public void off(){
         speed = OFF;
+        System.out.println(location + " ceiling fan is on off");
     }
 
     public int getSpeed() {
