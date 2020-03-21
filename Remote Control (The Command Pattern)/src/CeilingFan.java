@@ -1,5 +1,5 @@
 public class CeilingFan {
-    String location;
+    private String location;
     public static final int HIGH = 3;
     public static final int MEDIUM = 2;
     public static final int LOW = 1;

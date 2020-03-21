@@ -1,5 +1,5 @@
 public class Stereo {
-    String room;
+    private String room;
     int volume = 0;
 
     public Stereo(String room) {

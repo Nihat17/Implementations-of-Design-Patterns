@@ -1,5 +1,5 @@
 public class Light {
-    String roomName;
+    private String roomName;
     public Light(String roomName){
         this.roomName = roomName;
     }
