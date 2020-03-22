@@ -4,7 +4,11 @@ public class RemoteLoader {
       RemoteControl remoteControl = new RemoteControl();
 
       Light light = new Light("Living Room");
-      TV tv = new TV("Living Room");
+
+      remoteControl.setCommand(0, () -> {light.on();}, () -> {light.off();});
+
+      remoteControl.onButtonWasPushed(0);
+      /*TV tv = new TV("Living Room");
       Stereo stereo = new Stereo("Living Room");
       Hottub hottub = new Hottub();
 
@@ -34,5 +38,6 @@ public class RemoteLoader {
       System.out.println("---Pushing Macro Off---");
       remoteControl.offButtonWasPushed(0);
       remoteControl.undoButtonWasPushed();
+       */
     }
 }
