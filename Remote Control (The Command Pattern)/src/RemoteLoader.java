@@ -3,41 +3,39 @@ public class RemoteLoader {
 
       RemoteControl remoteControl = new RemoteControl();
 
-      Light light = new Light("Living Room");
-
-      remoteControl.setCommand(0, () -> {light.on();}, () -> {light.off();});
-
-      remoteControl.onButtonWasPushed(0);
-      /*TV tv = new TV("Living Room");
+      Light livingRoomlight = new Light("Living Room");
+      Light kithcenLight = new Light("Kitchen");
+      CeilingFan ceilingFan = new CeilingFan("Living Room");
+      GarageDoor garageDoor = new GarageDoor("Main house");
       Stereo stereo = new Stereo("Living Room");
-      Hottub hottub = new Hottub();
 
-      LightOnCommand lightOn = new LightOnCommand(light);
-      LightOffCommand lightOff = new LightOffCommand(light);
+      /*
+       passing method reference
+       instead of lambda expressions
+       a method reference is same thing as lambda expressions
+       it's just a shorthand for a lambda expression that calls
+       just one method
+       */
+      remoteControl.setCommand(0, livingRoomlight::on, livingRoomlight::off);
+      remoteControl.setCommand(1, kithcenLight::on, kithcenLight::off);
+      remoteControl.setCommand(2, ceilingFan::high, ceilingFan::off);
 
-      StereoOnCommand stereoOn = new StereoOnCommand(stereo);
-      StereoOffCommand stereoOff = new StereoOffCommand(stereo);
-
-      TVOnCommand tvOn = new TVOnCommand(tv);
-      TVOffCommand tvOff = new TVOffCommand(tv);
-
-      HottubOnCommand hottubOn = new HottubOnCommand(hottub);
-      HotttubOffCommand hotttubOff = new HotttubOffCommand(hottub);
-
-      Command [] partyOn = {lightOn, stereoOn, tvOn, hottubOn};
-      Command [] partyOff = {lightOff, stereoOff, tvOff, hotttubOff};
-
-      MacroCommand partyOnMacro = new MacroCommand(partyOn);
-      MacroCommand partyOffMacro = new MacroCommand(partyOff);
-
-      remoteControl.setCommand(0, partyOnMacro, partyOffMacro);
+      Command stereoOnWithCD = () -> {
+          stereo.on(); stereo.setCd(); stereo.setVolume(11);
+      };
+      remoteControl.setCommand(3, stereoOnWithCD, stereo::off);
+      remoteControl.setCommand(4, garageDoor::up, garageDoor::down);
 
       System.out.println(remoteControl);
-      System.out.println("---Pushing Macro On---");
+
       remoteControl.onButtonWasPushed(0);
-      System.out.println("---Pushing Macro Off---");
       remoteControl.offButtonWasPushed(0);
-      remoteControl.undoButtonWasPushed();
-       */
+      remoteControl.onButtonWasPushed(1);
+      remoteControl.offButtonWasPushed(1);
+      remoteControl.onButtonWasPushed(2);
+      remoteControl.offButtonWasPushed(2);
+      remoteControl.onButtonWasPushed(3);
+      remoteControl.offButtonWasPushed(3);
+
     }
 }
