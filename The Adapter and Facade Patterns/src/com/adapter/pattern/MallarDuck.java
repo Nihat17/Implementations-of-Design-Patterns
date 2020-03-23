@@ -1,3 +1,5 @@
+package com.adapter.pattern;
+
 public class MallarDuck implements Duck{
     @Override
     public void fly() {

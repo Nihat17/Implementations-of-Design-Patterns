@@ -1,20 +1,20 @@
+import com.adapter.pattern.*;
+import com.facade.pattern.*;
+
 public class Main {
     public static void main(String[] args){
-        Duck mallarDuck = new MallarDuck();
-        System.out.println("Duck says");
-        testDuck(mallarDuck);
+        Amplifier amp = new Amplifier();
+        CdPlayer cd = new CdPlayer();
+        DvdPlayer dvd = new DvdPlayer();
+        PopcornPopper popper = new PopcornPopper();
+        Projector projector = new Projector();
+        Screen screen = new Screen();
+        TheaterLights lights = new TheaterLights();
+        Tuner tuner = new Tuner();
+        HomeTheaterFacade homeTheater = new HomeTheaterFacade(amp, tuner, dvd, cd,
+                                                            projector, lights, screen, popper);
+        homeTheater.watchMovie("On the Road");
+        homeTheater.endMovie();
 
-        Turkey wildTurkey = new WildTurkey();
-        System.out.println("Turkey says");
-        wildTurkey.gobble();
-        wildTurkey.fly();
-
-        System.out.println("Turkey Adapter says");
-        TurkeyAdapter turkeyAdapter = new TurkeyAdapter(wildTurkey);
-        testDuck(turkeyAdapter);
-    }
-    static void testDuck(Duck duck){
-        duck.quack();
-        duck.fly();
     }
 }

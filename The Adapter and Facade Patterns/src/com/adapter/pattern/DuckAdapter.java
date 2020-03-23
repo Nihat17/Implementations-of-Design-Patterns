@@ -1,3 +1,5 @@
+package com.adapter.pattern;
+
 public class DuckAdapter implements Turkey {
     private Duck duck;
 

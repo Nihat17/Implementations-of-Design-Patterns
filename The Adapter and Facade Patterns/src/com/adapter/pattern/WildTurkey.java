@@ -1,4 +1,6 @@
-public class WildTurkey implements Turkey{
+package com.adapter.pattern;
+
+public class WildTurkey implements Turkey {
     @Override
     public void gobble() {
         System.out.println("Gobble !");

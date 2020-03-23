@@ -1,3 +1,5 @@
+package com.adapter.pattern;
+
 import java.util.Enumeration;
 import java.util.Iterator;
 
